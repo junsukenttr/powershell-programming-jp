@@ -3,13 +3,15 @@
 ## １．スクリプトブロック
 *[about_Script_Blocks](http://technet.microsoft.com/ja-jp/library/dd315277.aspx) microsoft online help.*
 
-*PS > man about_Script_Blocks
+*PS > man about_Script_Blocks*
+
+### スクリプトブロックを作る
 
 PowerShellプログラミングの最小単位は、スクリプトブロックです。
 
 スクリプトブロックを記述しただけでは実行されません。
 
-
+``` powershell
     PS > # 文字列を返すscriptblock
     PS > # [scriptblock]型のオブジェクトが生成され、ToString()の結果が表示されている。
     PS > # 実行されていない。
@@ -24,9 +26,11 @@ PowerShellプログラミングの最小単位は、スクリプトブロック�
     PS > # Create(string) スタティックメソッドで、スクリプトブロックを生成します
     PS > [scriptblock]::Create("`$a + `$b - `$c * `$d / `$e")
     PS > $a + $b - $c * $d / $e
+```
 
 実行するには、&:呼び出し演算子を直前につけます。
 
+``` powershell
     PS > & {"the script block code"}
     PS > the script block code
     
@@ -43,7 +47,9 @@ PowerShellプログラミングの最小単位は、スクリプトブロック�
     PS > $a=1; $b=2; $c=3; $d=4; $e=5
     PS > & $scriptblock
     PS > 0.6
+```
 
+### スクリプトブロックで引数を取る
 
 ## ２．関数
 ## ３．高度な関数

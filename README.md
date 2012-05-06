@@ -1,9 +1,11 @@
 # PowerShell プログラミング
 
 ## １．スクリプトブロック
-*[about_script_block](http://echonest.github.com/pyechonest/) ms online help.*
+*[about_Script_Blocks](http://technet.microsoft.com/ja-jp/library/dd315277.aspx) microsoft online help.*
+*PS > man about_Script_Blocks
 
 PowerShellプログラミングの最小単位は、スクリプトブロックです。
+
 スクリプトブロックを記述しただけでは実行されません。
 
 

@@ -1,8 +1,8 @@
-PowerShell �v���O���~���O
+# PowerShell プログラミング
 
-�P�D�X�N���v�g�u���b�N
-�Q�D�֐�
-�R�D���x�Ȋ֐�
-�S�D�t�B���^�[
-�T�D�X�N���v�g�t�@�C��(.ps1)
-�U�D���W���[��(.psd1, .psm1, .psxml)
+## １．スクリプトブロック
+## ２．関数
+## ３．高度な関数
+## ４．フィルター
+## ５．永続化：スクリプトファイル(.ps1)
+## ６．高度な永続化：モジュール(.psd1, .psm1, .psxml)

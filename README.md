@@ -1,6 +1,47 @@
 # PowerShell プログラミング
 
 ## １．スクリプトブロック
+*[about_script_block](http://echonest.github.com/pyechonest/) ms online help.*
+
+PowerShellプログラミングの最小単位は、スクリプトブロックです。
+スクリプトブロックを記述しただけでは実行されません。
+
+
+    PS > # 文字列を返すscriptblock
+    PS > # [scriptblock]型のオブジェクトが生成され、ToString()の結果が表示されている。
+    PS > # 実行されていない。
+    PS > {"the script block code"}
+    PS > "the script block code"
+    
+    PS > # 計算結果を返すscriptblock
+    PS > {$a + $b - $c * $d / $e}
+    PS > $a + $b - $c * $d / $e
+    
+    PS > # [scriptblock]は、System.Management.Automation.ScriptBlockのアクセラレーター
+    PS > # Create(string) スタティックメソッドで、スクリプトブロックを生成します
+    PS > [scriptblock]::Create("`$a + `$b - `$c * `$d / `$e")
+    PS > $a + $b - $c * $d / $e
+
+実行するには、&:呼び出し演算子を直前につけます。
+
+    PS > & {"the script block code"}
+    PS > the script block code
+    
+    PS > $a=$b=$c=$d=$e=1
+    PS > & {$a + $b - $c * $d / $e}
+    PS > 1
+    
+    PS > # scriptblockを変数に格納します。
+    PS > $scriptblock = [scriptblock]::Create("`$a + `$b - `$c * `$d / `$e")
+    PS > 
+    PS > $a=$b=$c=$d=$e=1
+    PS > & $scriptblock
+    PS > 1
+    PS > $a=1; $b=2; $c=3; $d=4; $e=5
+    PS > & $scriptblock
+    PS > 0.6
+
+
 ## ２．関数
 ## ３．高度な関数
 ## ４．フィルター

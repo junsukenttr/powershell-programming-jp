@@ -1,4 +1,15 @@
 # PowerShell プログラミング
+*このドキュメントは、README.mdの練習として記述しています。嘘はありません。*
+
+PowerShell2.0からは、「モジュール」と呼ばれる機能があります。
+モジュールは、目的別に、1つのフォルダの中に作成します。
+* 自作したスクリプト(.ps1, .psm1)
+* 設定ファイル(.psd1, .ps1xml)
+* ヘルプファイル(*-Help.xml)
+* データベースのライブラリなどのDLL(.DLL)
+* 国際化データ(*.psd1) *各言語ごとに表示するメッセージを変更したりします*
+
+モジュールを作成できるように、PowerShell プログラミングを進めます。
 
 ## １．スクリプトブロック
 *[about_Script_Blocks](http://technet.microsoft.com/ja-jp/library/dd315277.aspx) microsoft online help.*
@@ -63,13 +74,16 @@ PowerShellプログラミングの最小単位は、スクリプトブロック�
     PS > & {param($str1, $str2) "$str1 is $str2 definition"} param argument
     param is argument definition
     
-    PS > # 引数の型を定義してます。
+    PS > # 引数の型を定義して実行します。
     PS > & {param([int]$num1, [int]$num2) $num1 + $num2} 1 2
     3
+    
+    PS > # $_
+    PS > & {param([int]$num1, [int]$num2) $num1 + $num2} 1 2
 ```
 
 ## ２．関数
 ## ３．高度な関数
 ## ４．フィルター
 ## ５．永続化：スクリプトファイル(.ps1)
-## ６．高度な永続化：モジュール(.psd1, .psm1, .psxml)
+## ６．高度な永続化：モジュール(.psd1, .psm1, .ps1xml)
